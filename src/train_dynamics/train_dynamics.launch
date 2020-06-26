@@ -1,4 +1,0 @@
-<launch>
-  <node name="velocity_recommendation" pkg="train_dynamics" type="scripts/velocity_recommendation" />
-  <node name="sim_dist" pkg="train_dynamics" type="scripts/sim_dist" />
-</launch>
