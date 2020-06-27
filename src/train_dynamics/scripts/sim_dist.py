@@ -8,11 +8,9 @@ def sim_dist():
     pub = rospy.Publisher('rslidar/movement_authority', Float32, queue_size=10)
     dist = Float32(30*np.random.rand())
     rate = rospy.Rate(10) # 10Hz
-    print dist
-    rospy.loginfo(dist)
-    pub.publish(dist)
-    rate.sleep()
-    rospy.spin()
+    while not rospy.is_shutdown():
+        pub.publish(dist)
+        rate.sleep()
 
 if __name__ == '__main__':
     try:
