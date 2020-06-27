@@ -9,7 +9,7 @@ def velocity_recommender(data):
     v = np.sqrt(2*b*data.data)
     print str(v)
     vel_rec = Float32(v)
-    rospy.loginfo(vel_rev)
+    rospy.loginfo(vel_rec)
     pub.publish(vel_rec)
 
 
