@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(train_dynamics)
-
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -48,12 +47,12 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-#add_message_files(
-#  FILES
+add_message_files(
+  FILES
 #  Authority.msg
 #   Message1.msg
 #   Message2.msg
-#)
+)
 
 ## Generate services in the 'srv' folder
 #add_service_files(
@@ -75,6 +74,8 @@ generate_messages(
   DEPENDENCIES
   std_msgs
 )
+
+catkin_package()
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -166,6 +167,10 @@ include_directories(
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
+
+catkin_python_setup()
+#catkin_install_python(PROGRAMS bin/hello
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 ## Mark executables and/or libraries for installation
 # install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node

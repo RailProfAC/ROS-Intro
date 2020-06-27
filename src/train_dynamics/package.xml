@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>train_dynamics</name>
-  <version>0.1.0</version>
+  <version>0.0.0</version>
   <description>Velocity recommendation from free distance</description>
   <maintainer email="raphael@r10f.com">raphael</maintainer>
   <license>MIT</license>
