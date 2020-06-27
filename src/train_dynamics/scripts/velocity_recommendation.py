@@ -6,7 +6,7 @@ import numpy as np
 def velocity_recommender(data):
     pub = rospy.Publisher('rslidar/movement_authority', Float32, queue_size=10)
     b = 0.8 #Fixed deceleration, tbd
-    v = np.sqrt(2*b*data)
+    v = np.sqrt(2*b*data.data)
     print str(v)
     vel_rec = Float32(v)
     pub.publish(vel_rec)
