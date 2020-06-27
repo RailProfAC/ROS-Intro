@@ -11,6 +11,7 @@ def sim_dist():
     rospy.loginfo(dist)
     pub.publish(dist)
     rate.sleep()
+    rospy.spin()
 
 if __name__ == '__main__':
     try:
