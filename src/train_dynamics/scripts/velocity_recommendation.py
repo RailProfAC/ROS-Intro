@@ -4,7 +4,7 @@ from std_msgs.msg import Float32
 import numpy as np
 
 def velocity_recommender(data):
-    pub = rospy.Publisher('rslidar/movement_authority', Float32, queue_size=10)
+    pub = rospy.Publisher('traindynamics/velocity_recommendation', Float32, queue_size=10)
     b = 0.8 #Fixed deceleration, tbd
     v = np.sqrt(2*b*data.data)
     print str(v)
