@@ -7,7 +7,8 @@ def sim_dist():
     rospy.init_node('sim_dist')
     pub = rospy.Publisher('rslidar/movement_authority', Float32, queue_size=10)
     dist = Float32(30*np.random.rand())
-    rate = rospy.Rate(1) # 1Hz
+    rate = rospy.Rate(10) # 10Hz
+    print dist
     rospy.loginfo(dist)
     pub.publish(dist)
     rate.sleep()
